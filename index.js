@@ -8,10 +8,7 @@ const getCoordinates = city => _.pick(city, 'lat', 'lon');
 const areSame = (a, b) => JSON.stringify(getCoordinates(a)) === JSON.stringify(getCoordinates(b));
 
 const groups = _.filter(
-  allTheCities.reduce(
-    (accumulator, city, index) => (console.log({ index, total: allTheCities.length }), ({ ...accumulator, [city.name]: [...(accumulator[city.name] || []), city] })),
-    {},
-  ),
+  _.groupBy(allTheCities, city => city.name),
   group => group.length > 1,
 );
 const groupsWithFoundLargestCity = groups.map(cities => ({ cities, largest: _.maxBy(cities, city => city.population) }));
