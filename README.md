@@ -2,6 +2,8 @@
 
 The source is https://github.com/zeke/all-the-cities, some data may be little deprecated.
 
+The following list contains all the cities with population at least 10 000 and existent other larger city with the same name.
+
 |cities name|...1|largest city population|largest city country|largest city latitude|largest city longitude|...2|smaller city population|smaller city country|smaller city latitude|smaller city longitude|
 |----|----|----|----|----|----|----|----|----|----|----|
 |Gustavo A. Madero|...|1,193,161|Mexico|19.49016|-99.10978|...|1,185,772|Mexico|22.86971|-98.75895|
