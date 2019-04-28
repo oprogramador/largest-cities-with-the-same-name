@@ -2,6 +2,11 @@ const allTheCities = require('all-the-cities');
 const _ = require('lodash');
 const jsonToMarkdown = require('json-to-markdown');
 const countriesByISO = require('i18n-iso-countries');
+const { slugify } = require('transliteration');
+
+allTheCities.forEach(city => {
+  city.name = slugify(city.name);
+});
 
 const englishNames = countriesByISO.getNames('en');
 const getCoordinates = city => _.pick(city, 'lat', 'lon');
